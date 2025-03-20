@@ -239,4 +239,16 @@ a:hover
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
+    cursor: pointer;
+}
+.final
+{
+    color: whitesmoke;
+    position: relative;
+    z-index: 6;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    text-align: center;
+    cursor: pointer;
 }
