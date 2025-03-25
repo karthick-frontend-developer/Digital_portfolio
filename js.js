@@ -16,11 +16,32 @@ btn2.addEventListener("click",function(){
     img.style.opacity = 1
     text.style.visibility = "visible"
     text.style.opacity = 1
+    if(screen.width <= 700)
+    {
+        img.style.transform = "scale(0.2)"
+    }
+    else
+    {
+        img.style.transform = "scale(0.5)"
+    }
 })
 img.addEventListener("click",()=>{
         img.style.visibility = "hidden"
         img.style.opacity = 0
         text.style.visibility = "hidden"
         text.style.opacity = 0
-
+        img.style.transform = "scale(0)"
 })
+const side_icon = document.querySelector(".useless")
+const side_navbar = document.querySelector(".side_navbar")
+function open_navbar()
+{
+    side_navbar.style.left = "0"
+}
+function close_navbar()
+{
+    side_navbar.style.left = "-60%"
+}
+console.log("Screen Width:", window.screen.width);
+console.log("Screen Height:", window.screen.height);
+
