@@ -115,7 +115,7 @@ a:hover
     left: 0px;
     clip-path: circle(37.4% at 49% 52%);
     border: 1px solid silver;
-    filter: brightness(80%);
+    filter: brightness(60%);
     transform: scale(0.7);
 }
 .detail1 p{
