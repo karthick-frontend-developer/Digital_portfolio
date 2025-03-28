@@ -78,7 +78,7 @@ a:hover
     justify-content: center;
     color: white;
     width: 100%;
-    height: 800px;
+    height: 900px;
     margin-bottom: 40px;
     column-gap: 100px;
 }
@@ -89,7 +89,7 @@ a:hover
     position: relative;
     left: 0px;
     top: 10px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px) !important;
     transition: 0.3s;
     border-radius: 20px;
     border: 2px solid white;
@@ -115,7 +115,7 @@ a:hover
     left: 0px;
     clip-path: circle(37.4% at 49% 52%);
     border: 1px solid silver;
-    filter: brightness(60%);
+    filter: brightness(80%);
     transform: scale(0.7);
 }
 .detail1 p{
@@ -145,6 +145,31 @@ a:hover
     height: 100%;
     z-index: 2;
 }
+.autoblur
+{
+    animation: autobluranimation linear both;
+    animation-timeline: view();
+}
+@keyframes autobluranimation
+{
+    0%
+    {
+        filter: blur(40px);
+    }
+    40%,60%
+    {
+        filter: blur(0);
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
+    100%
+    {
+        filter: blur(40px);
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
 .about_section
 {
     display: flex;
@@ -152,7 +177,7 @@ a:hover
     color: white;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: 400px;
+    margin-top: 300px;
 }
 .skil
 {
@@ -189,35 +214,43 @@ a:hover
     backdrop-filter: blur(30px);
     transition: 0.3s ease-in-out;
 }
+.detail1 button a 
+{
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    border: none;
+    margin-left: 10px;
+}
 .skill1:hover
 {
     box-shadow: 0px 0px 15px rgb(245, 245, 245);
-    opacity: 0.7;
+    opacity: 0.7 !important;
 }
 .skill2:hover
 {
     box-shadow: 0px 0px 15px rgb(245, 245, 245);
-    opacity: 0.7;
+    opacity: 0.7 !important;
 }
 .skill3:hover
 {
     box-shadow: 0px 0px 15px rgb(245, 245, 245);
-    opacity: 0.7;
+    opacity: 0.7 !important;
 }
 .skill4:hover
 {
     box-shadow: 0px 0px 15px rgb(245, 245, 245);
-    opacity: 0.7;
+    opacity: 0.7 !important;
 }
 .skill5:hover
 {
     box-shadow: 0px 0px 15px rgb(245, 245, 245);
-    opacity: 0.7;
+    opacity: 0.7 !important;
 }
 .skill6:hover
 {
     box-shadow: 0px 0px 15px rgb(245, 245, 245);
-    opacity: 0.7;
+    opacity: 0.7 !important;
 }
 .about_section img
 {
@@ -246,6 +279,7 @@ a:hover
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    margin-bottom: 50px;
     justify-content: center;
 }
 .form_section h1
@@ -277,31 +311,36 @@ a:hover
     cursor: pointer;
     text-align: center;;
 }
+.gen 
+{
+    display: flex;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+}
 #isee
 {
-    position: absolute;
     z-index: 9;
     visibility: hidden;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.5s;
     cursor: pointer;
     transform: scale(0);
-    top: 1650px;
-    text-align: center;
-    align-items: center;
-    display: flex;
+    position: absolute;
 }
 .final
 {
     color: rgb(255, 255, 255);
-    position: relative;
     z-index: 10;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
     text-align: center;
     cursor: pointer;
-    bottom: 145px;
 }
 .footer
 {
@@ -318,14 +357,16 @@ a:hover
 {
     width: 15px;
     height: 15px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 .finall
 {
     border: none;
     border-radius: 50%;
     background-color:silver;
-    padding: 4px 10px;
     text-align: center;
+    padding: 4px 10px;
 }
 .finall a 
 {
@@ -389,7 +430,7 @@ a:hover
 }
 .side_navbar ul li 
 {
-    padding: 12px;
+    padding: 10px;
     text-decoration: none;
     list-style: none;
 }
@@ -471,6 +512,9 @@ a:hover
     {
         width: 50px;
         height: 50px;
+        margin-top: 10px;
+        text-align: center;
+        align-items: center;
     }
     .skill1,.skill2,.skill3,.skill4,.skill5,.skill6
     {
@@ -497,8 +541,6 @@ a:hover
     }
     #isee
     {
-        top: 1800px;
-        right: -800px;
         transform: scale(0.1);
     }
     .footer
@@ -514,7 +556,7 @@ a:hover
     .contact_section
     {
         flex-direction: column-reverse;
-        height: 720px;
+        height: 700px;
     }
     .con1
     {
@@ -539,6 +581,20 @@ a:hover
         text-align: center;
         margin-top: 3px;
     } 
+    .side_navbar
+    {
+        box-shadow: 7px 0px 12px rgba(0, 0, 0, 0.437);
+    }
+    .gen
+    {
+        margin-top: 400px;
+        width: 340px;
+    }
+    .final
+    {
+        font-size: 15px;
+        margin-top: 75px;
+    }
 }
 @media screen and (min-width:1900px)
 {
